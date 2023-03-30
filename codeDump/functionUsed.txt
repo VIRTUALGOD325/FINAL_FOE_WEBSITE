@@ -1,0 +1,4 @@
+strlen to check password length
+preg_match function is used to check that string contains atleast one letter
+password_hash used to store passwords in a secure way
+password_verify to check the password stored in database as hash format 

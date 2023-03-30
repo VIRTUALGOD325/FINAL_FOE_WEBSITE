@@ -1,0 +1,233 @@
+/*
+//POST SUPER GLOBAL Element
+//print_r($_POST);
+
+
+//SUPER GLOBAL INFORAMTION VARIABLES
+$email = $_POST["email"];
+$pass = $_POST["password"];
+
+
+//HOST
+$host = "localhost";
+$dbname = "login_info";
+$username = "root";
+$password = "";
+
+
+//CONNECTION TO SERVER
+$conn = mysqli_connect($host, $username, $password, $dbname);
+
+if(mysqli_connect_errno()){
+    die("CONNECTION ERROR");
+}
+
+
+$sql = "INSERT INTO identity (email, password) VALUES (? , ?)";
+
+
+//PASS DATA SECURLY
+$stmt = mysqli_stmt_init($conn);
+
+mysqli_stmt_prepare($stmt , $sql);
+
+//SENDING DATA TO SERVER
+mysqli_stmt_bind_param($stmt, "ss", $email, $pass);
+
+
+mysqli_stmt_execute($stmt);
+
+echo "RECORD SAVED";
+
+
+
+//TEMP TO PRINT OUT ABOVE VARIABLES
+//var_dump($email,$password);
+*/
+
+??????
+<div class="row">
+                          <div class="col-lg-7 mx-auto">
+                            <div class="bg-white rounded-lg shadow-sm p-5">
+                              <!-- Credit card form tabs -->
+                              <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                                <li class="nav-item">
+                                  <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                                      <i class="fa fa-credit-card"></i>
+                                                      Credit Card
+                                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                                                      <i class="fa fa-paypal"></i>
+                                                      Paypal
+                                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                                                      <i class="fa fa-university"></i>
+                                                       Bank Transfer
+                                                   </a>
+                                </li>
+                              </ul>
+                              <!-- End -->
+                      
+                      
+                              <!-- Credit card form content -->
+                              <div class="tab-content">
+                      
+                                <!-- credit card info-->
+                                <div id="nav-tab-card" class="tab-pane fade show active">
+                                  <p class="alert alert-success">Some text success or error</p>
+                                  <form role="form" onclick="">
+                                    <div class="form-group">
+                                      <label for="username">Full name (on the card)</label>
+                                      <input type="text" name="username" placeholder="Jeff Doe" required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="cardNumber">Card number</label>
+                                      <div class="input-group">
+                                        <input type="text" name="cardNumber" placeholder="Your card number" class="form-control" required>
+                                        <div class="input-group-append">
+                                          <span class="input-group-text text-muted">
+                                                                      <i class="fa fa-cc-visa mx-1"></i>
+                                                                      <i class="fa fa-cc-amex mx-1"></i>
+                                                                      <i class="fa fa-cc-mastercard mx-1"></i>
+                                                                  </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-sm-8">
+                                        <div class="form-group">
+                                          <label><span class="hidden-xs">Expiration</span></label>
+                                          <div class="input-group">
+                                            <input type="number" placeholder="MM" name="" class="form-control" required>
+                                            <input type="number" placeholder="YY" name="" class="form-control" required>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-4">
+                                        <div class="form-group mb-4">
+                                          <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                                                      <i class="fa fa-question-circle"></i>
+                                                                  </label>
+                                          <input type="text" required class="form-control">
+                                        </div>
+                                      </div>
+                      
+                      
+                      
+                                    </div>
+                                    <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm" onclick="thanks()"> Confirm  </button>
+                                  </form>
+                                </div>
+                                <!-- End -->
+                      
+                                <!-- Paypal info -->
+                                <div id="nav-tab-paypal" class="tab-pane fade">
+                                  <p>Paypal is easiest way to pay online</p>
+                                  <p>
+                                    <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Log into my Paypal</button>
+                                  </p>
+                                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                  </p>
+                                </div>
+                                <!-- End -->
+                      
+                                <!-- bank transfer info -->
+                                <div id="nav-tab-bank" class="tab-pane fade">
+                                  <h6>Bank account details</h6>
+                                  <dl>
+                                    <dt>Bank</dt>
+                                    <dd> THE WORLD BANK</dd>
+                                  </dl>
+                                  <dl>
+                                    <dt>Account number</dt>
+                                    <dd>7775877975</dd>
+                                  </dl>
+                                  <dl>
+                                    <dt>IBAN</dt>
+                                    <dd>CZ7775877975656</dd>
+                                  </dl>
+                                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                  </p>
+                                </div>
+                                <!-- End -->
+                              </div>
+                              <!-- End -->
+                      
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!________>
+
+<li class="list-group-item"><a href="http://localhost/Bootstrap_05/product.html?product=1738430326">LUXURY</a></li>
+
+
+
+<<<<
+<section class="py-5">
+                <div class="container py-5">
+                    <div data-reflow-type="product" data-bss-dynamic-product data-bss-dynamic-product-param="product" data-reflow-shoppingcart-url="shopping-cart.html">
+                        <div class="reflow-product">
+                            <div class="reflow-media">
+                                <div class="ref-media">
+                                    <div class="ref-preview">
+                                        <img class="ref-image active" src="./assets/img/products/Fortuner1.jpeg" data-reflow-preview-type="image"/>
+                                    </div>
+                                    <div class="ref-product-data">
+                                        <h2 class="ref-name">FORTUNER</h2>
+                                        <div class="ref-categories">
+                                            <span class="ref-category">SUV</span>
+                                        </div>
+                                        <strong class="ref-price ref-on-sale">
+                                            <s class="ref-original-price">5000000</s>
+                                            3000000
+                                        </strong>
+                                        <span data-reflow-type="add-to-cart" data-reflow-shoppingcart-url="shopping-cart.html" data-reflow-addtocart-text data-reflow-product="659872606">
+                                            <span data-reflow-product="659872606" data-reflow-max-qty="1" data-reflow-quantity="1">
+                                                <div class="ref-quantity-widget">
+                                                    <div class="ref-decrease">
+                                                        <span></span>
+                                                    </div>
+                                                    <input type="text" value="1"/>
+                                                    <div class="ref-increase">
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <a class="ref-button" href="#">Add to Cart</a>
+                                        </span>
+                                        <div class="ref-description">
+                                            A most high in demand SUV by Toyota.
+                                            <b>The Toyota Fortuner is a midsize SUV that offers a blend of ruggedness, versatility, and comfort. It is built on the Toyota Hilux pickup truck platform and is designed to handle tough terrain and challenging driving conditions. The Fortuner is available in both rear-wheel-drive and four-wheel-drive configurations.
+
+                                                The Fortuner is powered by either a 2.7-liter four-cylinder gasoline engine that produces 164 horsepower and 181 lb-ft of torque or a 2.8-liter four-cylinder turbocharged diesel engine that produces 201 horsepower and 369 lb-ft of torque. Both engines are paired with a six-speed automatic transmission.
+                                                
+                                                The exterior of the Fortuner is bold and muscular, with a large front grille, flared fenders, and a prominent roofline. The interior is spacious and comfortable, with seating for up to seven passengers. The standard features include a touchscreen infotainment system, climate control, power-adjustable driver's seat, and a variety of safety features such as anti-lock brakes, stability control, and multiple airbags.
+                                                
+                                                In terms of performance, the Fortuner is designed to handle off-road conditions, thanks to its high ground clearance, advanced four-wheel-drive system, and a variety of terrain management modes. It also offers a smooth and comfortable ride on paved roads, making it a versatile SUV for both urban and rural driving.
+                                                
+                                                Overall, the Toyota Fortuner is a capable and reliable midsize SUV that offers a balance of ruggedness and comfort, making it a popular choice among drivers in many parts of the world.</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
